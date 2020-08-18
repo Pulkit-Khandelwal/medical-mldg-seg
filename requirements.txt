@@ -1,1 +1,10 @@
-
+PIL
+numpy
+torch
+scipy
+skimage
+nibabel
+SimpleITK
+medpy
+matplotlib
+tensorboardX
