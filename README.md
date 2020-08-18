@@ -9,6 +9,7 @@ Affiliations:
   - Penn Image Computing and Science Laboratory, Department of Radiology, University of Pennsylvania, Philadelphia, PA, United States
 
 Contact: pulks@seas.upenn.edu
+
 ***Note*** The code is actively being modified
 
 ![medical-mldg-seg](mldg_seg.png)
