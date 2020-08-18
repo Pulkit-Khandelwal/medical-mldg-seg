@@ -15,3 +15,8 @@ Code:
 - Unet architecture, losses at [pytorch-3dunet](https://github.com/wolny/pytorch-3dunet) 
 - Post-processing and miscellaneous functions [MIC-DKFZ/nnUNet](https://github.com/MIC-DKFZ/nnUNet) 
 
+### Citing the work
+
+```
+to be updated
+```
