@@ -6,10 +6,10 @@ PyTorch code for the MICCAI 2020 paper [Domain Generalizer: A Few-shot Meta Lear
 
 
 ### Code
-- `requirementst.txt` contains the majority of the libraries used
-- `data_split_up` folder consists of all the domain splits
+- `mldg-seg` folder consists is the main directory for all the PyTorch code
 - `postprocess` folder consists of code for computing the evaluation metrics, statistics and retaining the largest connected component
-- mldg-seg consists of the python files
+- `data_split_up` folder consists of all the domain splits
+- `requirementst.txt` contains the majority of the libraries used
 
 
 ### References
