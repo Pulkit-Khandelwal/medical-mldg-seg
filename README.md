@@ -1,2 +1,13 @@
-# medical-mldg-seg [To go live soon]
-Code for the MICCAI DART 2020 paper
+# medical-mldg-seg
+Code for the MICCAI 2020 paper (Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging)[] to be presented at Domain Adaptation and Representation Transfer (DART) 2020.
+
+
+
+
+### References
+
+Code:
+
+- []() 
+- []() 
+- []() 
