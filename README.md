@@ -14,8 +14,8 @@ Affiliations:
 
 
 ### Code
-- `mldg-seg` folder consists is the main directory for all the PyTorch code
-- `postprocess` folder consists of code for computing the evaluation metrics, statistics and retaining the largest connected component
+- `mldg-seg` folder consists is the main directory for all the PyTorch code for the procedures and experiments
+- `postprocess` folder consists of code for inference, computing the evaluation metrics, statistics, retaining the largest connected component, and tsne plots
 - `data_split_up` folder consists of all the domain splits
 - `requirementst.txt` contains the majority of the libraries used
 
