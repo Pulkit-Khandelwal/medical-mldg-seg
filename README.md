@@ -12,6 +12,8 @@ Affiliations:
 
 ![medical-mldg-seg](mldg_seg.png)
 
+### Abstract
+Deep learning models perform best when tested on target (test) data domains whose distribution is similar to the set of source (train) domains. However, model generalization can be hindered when there is significant difference in the underlying statistics between the target and source domains. In this work, we adapt a domain generalization method based on a model-agnostic meta-learning framework to biomedical imaging. The method learns a domain-agnostic feature representation to improve generalization of models to the unseen test distribution. The method can be used for any imaging task, as it does not depend on the underlying model architecture. We validate the approach through a computed tomography (CT) vertebrae segmentation task across healthy and pathological cases on three datasets. Next, we employ few-shot learning, i.e. training the generalized model using very few examples from the unseen domain, to quickly adapt the model to new unseen data distribution. Our results suggest that the method could help generalize models across different medical centers, image acquisition protocols, anatomies, different regions in a given scan, healthy and diseased populations across varied imaging modalities.
 
 ### Code
 - `mldg-seg` folder consists is the main directory for all the PyTorch code for the procedures and experiments
