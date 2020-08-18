@@ -1,6 +1,6 @@
 # Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging
 
-PyTorch code for the MICCAI 2020 paper [Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging]() to be presented at [Domain Adaptation and Representation Transfer (DART) 2020](https://sites.google.com/view/dart2020).
+PyTorch code of our MICCAI 2020 paper [Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging]() to be presented at [Domain Adaptation and Representation Transfer (DART) 2020](https://sites.google.com/view/dart2020).
 
 Authors: Pulkit Khandelwal and Paul A. Yushkevich.
 
