@@ -14,20 +14,16 @@ PyTorch code for the MICCAI 2020 paper [Domain Generalizer: A Few-shot Meta Lear
 
 ### References
 
-The current work is developed upon the awesome work by:
-[Learning to Generalize: Meta-Learning for Domain Generalization](https://arxiv.org/pdf/1710.03463.pdf)
+- The current work is developed upon the awesome work by: [Learning to Generalize: Meta-Learning for Domain Generalization](https://arxiv.org/pdf/1710.03463.pdf)
 
-For a comprehensive overview of CT vertebrae segmentation look at the MSc thesis:
+- For a comprehensive overview of CT vertebrae segmentation look at the MSc thesis: [Spine segmentation in computed tomography images using geometric flows and shape priors](https://escholarship.mcgill.ca/concern/theses/4b29bb21t) by Pulkit Khandelwal, and supervised by [Prof. Kaleem Siddiqi](http://www.cim.mcgill.ca/~siddiqi/) and [Prof. D. Louis Collins](http://nist.mni.mcgill.ca/) at McGill University.
 
-[Spine segmentation in computed tomography images using geometric flows and shape priors](https://escholarship.mcgill.ca/concern/theses/4b29bb21t) by Pulkit Khandelwal, and supervised by [Prof. Kaleem Siddiqi](http://www.cim.mcgill.ca/~siddiqi/) and [Prof. D. Louis Collins](http://nist.mni.mcgill.ca/) at McGill University.
+- See the paper for the complete list of references.
 
-See the paper for the complete list of references.
-
-Code:
-
-- Code adapted and inspired from: [Learning to Generalize: Meta-Learning for Domain Generalization](https://github.com/HAHA-DL/MLDG) 
-- Unet architecture, losses at [pytorch-3dunet](https://github.com/wolny/pytorch-3dunet) 
-- Post-processing and miscellaneous functions [MIC-DKFZ/nnUNet](https://github.com/MIC-DKFZ/nnUNet) 
+- Code:
+  - Code adapted and inspired from: [Learning to Generalize: Meta-Learning for Domain Generalization](https://github.com/HAHA-DL/MLDG) 
+  - Unet architecture, losses at [pytorch-3dunet](https://github.com/wolny/pytorch-3dunet) 
+  - Post-processing and miscellaneous functions [MIC-DKFZ/nnUNet](https://github.com/MIC-DKFZ/nnUNet) 
 
 
 ### Citing the work
