@@ -1,6 +1,6 @@
 # Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging
 
-PyTorch code of our MICCAI 2020 paper [Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging]() to be presented at [Domain Adaptation and Representation Transfer (DART) 2020](https://sites.google.com/view/dart2020)
+PyTorch code of our MICCAI 2020 paper [Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging](https://arxiv.org/abs/2008.07724) to be presented at [Domain Adaptation and Representation Transfer (DART) 2020](https://sites.google.com/view/dart2020)
 
 Authors: [Pulkit Khandelwal](https://pulkit-khandelwal.github.io/) and [Paul A. Yushkevich](http://picsl.upenn.edu/people/faculty-staff/paul-yushkevich/)
 
@@ -41,5 +41,12 @@ Deep learning models perform best when tested on target (test) data domains whos
 ### Citing the work
 
 ```
-to be updated
+@misc{kh2020domain,
+    title={Domain Generalizer: A Few-shot Meta Learning Framework for Domain Generalization in Medical Imaging},
+    author={Pulkit Khandelwal and Paul Yushkevich},
+    year={2020},
+    eprint={2008.07724},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ```
