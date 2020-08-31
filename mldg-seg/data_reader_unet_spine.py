@@ -455,18 +455,19 @@ def random_transform(x, y=None,
 
 
 class BatchImageGenerator(data.Dataset):
-    def __init__(self, image_list, modality, transform=False, patch_size=64, n_patches_transform=30, all_patches=False, is_test=False, val=False):
+    def __init__(self, image_list, modality, transform=False, patch_size=32, n_patches_transform=30, all_patches=False, is_test=False, val=False):
 
         imlist = []
+        #self.base_training_folder = base_training_folder
         self.image_list = image_list
         self.modality = modality
         self.transform = transform
         self.patch_size = patch_size
         self.val = val
-        self.patches_per_image = 50 #5
+        self.patches_per_image = 50
         if self.val == True:
-            self.patches_per_image = 50 #20
-
+            self.patches_per_image = 50
+            
         self.image_size = (129, 166, 128)
         self.n_patches_transform = n_patches_transform
         self.is_test = is_test
@@ -482,24 +483,37 @@ class BatchImageGenerator(data.Dataset):
         self.imlist=imlist
 
     def __getitem__(self, index):
-
+        
         single_data_name = self.imlist[index]
         print(">>>>>>>> current image is >>>>>>>>>>> ", single_data_name)
-        image_data, label_data = read_nifti(single_data_name)
+        image_data, label_data = read_nifti_miccai(single_data_name) #read_nifti
         image_standardized = Standardize(image_data)
         image_normalized = Normalize(image_standardized, min_value=0, max_value=1)
         image_cropped, label_cropped = image_normalized, label_data
-
+        
         image_shape = np.shape(image_data)
         sg_size = image_shape[0]
         cr_size = image_shape[1]
         ax_size = image_shape[2]
-        step_size = 10
-
+        step_size = 40
+        img_size = [sg_size, cr_size, ax_size]
+        
         if self.is_test is True:
             c=1
+            # zero-pad the image
+            #print(np.shape(image_cropped))
+            image_cropped = np.pad(image_cropped, ((step_size//2, step_size//2) , (step_size//2, step_size//2), (step_size//2, step_size//2)), 'symmetric')
+            label_cropped = np.pad(label_cropped, ((step_size//2, step_size//2) , (step_size//2, step_size//2), (step_size//2, step_size//2)), 'symmetric')
+            image_shape = np.shape(image_cropped)
+            sg_size = image_shape[0]
+            cr_size = image_shape[1]
+            ax_size = image_shape[2]
+            img_size = [sg_size, cr_size, ax_size]
+            #print(np.shape(image_cropped))
+            
             image_patch_list = []
             label_patch_list = []
+            patch_indices = []
             for x in range(0, ax_size - self.patch_size, step_size):
                 idx1_ax = x
                 idx2_ax = idx1_ax + self.patch_size
@@ -515,17 +529,18 @@ class BatchImageGenerator(data.Dataset):
 
                         image_return = image_cropped[idx1_sg:idx2_sg, idx1_cr:idx2_cr, idx1_ax:idx2_ax]
                         label_return = label_cropped[idx1_sg:idx2_sg, idx1_cr:idx2_cr, idx1_ax:idx2_ax]
-
+                        
                         if np.sum(label_return) != 0:
                             image_patch_list.append(image_return)
                             label_patch_list.append(label_return)
                             c=c+1
-
+                            patch_indices.append([(idx1_sg,idx2_sg), (idx1_cr,idx2_cr), (idx1_ax,idx2_ax)])
+                            
             image_patch_list = np.reshape(image_patch_list, (c-1, 1, self.patch_size, self.patch_size, self.patch_size))
             label_patch_list = np.reshape(label_patch_list, (c-1, self.patch_size, self.patch_size, self.patch_size))
             print("size of the images and labels are", np.shape(image_patch_list), np.shape(label_patch_list))
             print("type is", type(image_patch_list), type(label_patch_list))
-            return image_patch_list, label_patch_list
+            return image_patch_list, label_patch_list, patch_indices, img_size
 
         else:
 
@@ -534,9 +549,10 @@ class BatchImageGenerator(data.Dataset):
             # the above was returned as a numpy array
             image_patch_list = np.reshape(image_patch_list, (self.patches_per_image, 1, self.patch_size, self.patch_size, self.patch_size))
             label_patch_list = np.reshape(label_patch_list, (self.patches_per_image, self.patch_size, self.patch_size, self.patch_size))
+        
+            print(">>>>>> see should be like this >>>>>>", np.shape(image_patch_list), np.shape(label_patch_list))
 
             if self.transform is True:
-                print("this is the test set")
 
                 # randomly select some patches to apply
                 indices_random_patches = random.sample(range(0, len(image_patch_list)), k=self.n_patches_transform)
@@ -573,10 +589,13 @@ class BatchImageGenerator(data.Dataset):
                 images_all = np.vstack((transformed_list_images, image_patch_list))
                 labels_all = np.vstack((transformed_list_label, label_patch_list))
 
+                #print(">>>>> actual number of images for an image <<<<<", np.shape(images_all), np.shape(labels_all))
+
                 return images_all, labels_all
 
             else:
+                # returns numpy array of patches of images, and labels
                 return image_patch_list, label_patch_list
-
+        
     def __len__(self):
         return len(self.imlist)
