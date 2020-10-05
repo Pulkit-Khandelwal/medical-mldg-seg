@@ -1,0 +1,6 @@
+/home/pulkit/spine_images/case6/thoracic_lower_image_iso.nii.gz
+/home/pulkit/spine_images/case4/thoracic_lower_image_iso.nii.gz
+/home/pulkit/spine_images/case1/thoracic_lower_image_iso.nii.gz
+/home/pulkit/spine_images/case3/thoracic_lower_image_iso.nii.gz
+/home/pulkit/spine_images/case5/thoracic_lower_image_iso.nii.gz
+/home/pulkit/spine_images/case2/thoracic_lower_image_iso.nii.gz

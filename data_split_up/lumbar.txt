@@ -1,0 +1,6 @@
+/home/pulkit/spine_images/case6/lumbar_image_iso.nii.gz
+/home/pulkit/spine_images/case4/lumbar_image_iso.nii.gz
+/home/pulkit/spine_images/case1/lumbar_image_iso.nii.gz
+/home/pulkit/spine_images/case3/lumbar_image_iso.nii.gz
+/home/pulkit/spine_images/case5/lumbar_image_iso.nii.gz
+/home/pulkit/spine_images/case2/lumbar_image_iso.nii.gz
