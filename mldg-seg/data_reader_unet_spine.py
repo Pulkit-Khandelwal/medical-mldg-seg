@@ -24,8 +24,6 @@ from torchvision.transforms import Compose
 from nipype.interfaces.ants import N4BiasFieldCorrection
 import scipy.ndimage as ndi
 from scipy.ndimage import map_coordinates, gaussian_filter
-from patches_utils import *
-
 
 ## supporting functions for generating probability based patches
 def perturb_patch_locations(patch_locations, radius):
