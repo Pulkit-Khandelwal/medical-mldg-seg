@@ -484,7 +484,7 @@ class BatchImageGenerator(data.Dataset):
         
         single_data_name = self.imlist[index]
         print(">>>>>>>> current image is >>>>>>>>>>> ", single_data_name)
-        image_data, label_data = read_nifti_miccai(single_data_name) #read_nifti
+        image_data, label_data = read_nifti(single_data_name)
         image_standardized = Standardize(image_data)
         image_normalized = Normalize(image_standardized, min_value=0, max_value=1)
         image_cropped, label_cropped = image_normalized, label_data
