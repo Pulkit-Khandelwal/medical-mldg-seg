@@ -10,8 +10,6 @@ Affiliations:
 
 Contact: pulks@seas.upenn.edu
 
-***Note*** The code is actively being modified
-
 ![medical-mldg-seg](mldg_seg.png)
 
 ### Abstract
@@ -26,7 +24,7 @@ Deep learning models perform best when tested on target (test) data domains whos
 
 ### References
 
-- The current work is inspired by the awesome work by: [Learning to Generalize: Meta-Learning for Domain Generalization](https://arxiv.org/pdf/1710.03463.pdf)
+- The current work is inspired by: [Learning to Generalize: Meta-Learning for Domain Generalization](https://arxiv.org/pdf/1710.03463.pdf)
 
 - For a comprehensive overview of CT vertebrae segmentation look at the MSc thesis: [Spine segmentation in computed tomography images using geometric flows and shape priors](https://escholarship.mcgill.ca/concern/theses/4b29bb21t) by Pulkit Khandelwal, and supervised by [Prof. Kaleem Siddiqi](http://www.cim.mcgill.ca/~siddiqi/) and [Prof. D. Louis Collins](http://nist.mni.mcgill.ca/) at McGill University.
 
