@@ -107,7 +107,7 @@ class ConvU(nn.Module):
 
 class Unet3D(nn.Module):
     def __init__(self, c=1, n=16, dropout=0.3, norm='gn', num_classes=2):
-        super(Unet3D, self).__init__()Unet3D_meta_learning
+        super(Unet3D, self).__init__()
 
         self.convd1 = ConvD(c,     n, dropout, norm, first=True)
         self.convd2 = ConvD(n,   2*n, dropout, norm)
