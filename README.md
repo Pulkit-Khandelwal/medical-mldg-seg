@@ -26,7 +26,7 @@ Deep learning models perform best when tested on target (test) data domains whos
 
 - The current work is inspired by: [Learning to Generalize: Meta-Learning for Domain Generalization](https://arxiv.org/pdf/1710.03463.pdf)
 
-- For a comprehensive overview of CT vertebrae segmentation look at the MSc thesis: [Spine segmentation in computed tomography images using geometric flows and shape priors](https://escholarship.mcgill.ca/concern/theses/4b29bb21t) by Pulkit Khandelwal, and supervised by [Prof. Kaleem Siddiqi](http://www.cim.mcgill.ca/~siddiqi/) and [Prof. D. Louis Collins](http://nist.mni.mcgill.ca/) at McGill University.
+- For a comprehensive overview of CT vertebrae segmentation look at the paper: [Spine and Individual Vertebrae Segmentation in Computed Tomography Images Using Geometric Flows and Shape Priors](https://www.frontiersin.org/articles/10.3389/fcomp.2021.592296/full) or MSc thesis: [Spine segmentation in computed tomography images using geometric flows and shape priors](https://escholarship.mcgill.ca/concern/theses/4b29bb21t) by Pulkit Khandelwal, and supervised by [Prof. Kaleem Siddiqi](http://www.cim.mcgill.ca/~siddiqi/) and [Prof. D. Louis Collins](http://nist.mni.mcgill.ca/) at McGill University.
 
 - See paper for the complete list of references.
 
