@@ -34,6 +34,7 @@ Deep learning models perform best when tested on target (test) data domains whos
   - Code adapted and inspired from: [Learning to Generalize: Meta-Learning for Domain Generalization](https://github.com/HAHA-DL/MLDG) 
   - Unet architecture, losses at [pytorch-3dunet](https://github.com/wolny/pytorch-3dunet) 
   - Post-processing and miscellaneous functions [MIC-DKFZ/nnUNet](https://github.com/MIC-DKFZ/nnUNet) 
+  - Data Augmentation [image_tools](https://github.com/fcalvet/image_tools)
 
 
 ### Citing the work
